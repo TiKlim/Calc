@@ -1,0 +1,202 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Calc.MainWindow"
+        Title="Calc" MaxHeight="700" MaxWidth="500" MinHeight="800" MinWidth="500">
+	<Grid ShowGridLines="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+		</Grid.RowDefinitions>
+		<Menu>
+			
+		</Menu>
+		<TextBlock>
+			
+		</TextBlock>
+		<Grid ShowGridLines="False" Background="Azure">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>			
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Button Name="nol" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="1" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					0
+				</TextBlock>
+			</Button>
+			<Button Name="one" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="0" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					1
+				</TextBlock>
+			</Button>
+			<Button Name="two" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="1" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					2
+				</TextBlock>
+			</Button>
+			<Button Name="three" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="2" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					3
+				</TextBlock>
+			</Button>
+			<Button Name="four" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="0" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					4
+				</TextBlock>
+			</Button>
+			<Button Name="five" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="1" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					5
+				</TextBlock>
+			</Button>
+			<Button Name="six" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="2" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					6
+				</TextBlock>
+			</Button>
+			<Button Name="seven" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					7
+				</TextBlock>
+			</Button>
+			<Button Name="eight" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="1" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					8
+				</TextBlock>
+			</Button>
+			<Button Name="nine" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="2" Height="70" Width="115" Background="CadetBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					9
+				</TextBlock>
+			</Button>
+			<Button Name="minusodin" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="2" Height="70" Width="115" Background="CornflowerBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					←
+				</TextBlock>
+			</Button>
+			<Button Name="c1" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="0" Height="70" Width="115" Background="CornflowerBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					С
+				</TextBlock>
+			</Button>
+			<Button Name="ravno" HorizontalAlignment="Center" Grid.Row="9" Grid.Column="3" Height="70" Width="115" Background="DarkBlue" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					=
+				</TextBlock>
+			</Button>
+			<Button Name="plus" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					+
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					-
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					х
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					÷
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="5" Grid.Column="2" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					π
+				</TextBlock>
+			</Button>
+			<Button Name="dot" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					.
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="5" Grid.Column="0" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					%
+				</TextBlock>
+			</Button>
+			<Button Name="skobka1" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					(
+				</TextBlock>
+			</Button>
+			<Button Name="skobka2" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="1" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					)
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					log
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					+/-
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					√
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="2" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					x^y
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					n!
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="3" Grid.Column="0" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					|x|
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="2" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					tg
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="3" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					ctg
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					cos
+				</TextBlock>
+			</Button>
+			<Button HorizontalAlignment="Center" Grid.Row="2" Grid.Column="0" Height="70" Width="115" Background="DarkCyan" CornerRadius="14">
+				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
+					sin
+				</TextBlock>
+			</Button>
+			<TextBox x:Name="vvod" TextWrapping="Wrap" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="2" Grid.Column="0" FontSize="55" Watermark="0" Background="White" Foreground="Black" Height="160" Width="500" HorizontalAlignment="Center" VerticalAlignment="Stretch" CornerRadius="0"/>
+		</Grid>
+	</Grid>
+</Window>
