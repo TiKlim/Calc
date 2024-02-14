@@ -1,13 +1,17 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using System;
 using System.Net.Http.Headers;
 
 namespace Calc
 {
     public partial class MainWindow : Window
     {
-        private string input;
-        private int inputint;
+        private string? input;
+        private double inputint;
+        private double inputint2;
+
+        //private int chislo;
         public MainWindow()
         {
             InitializeComponent();
@@ -21,19 +25,66 @@ namespace Calc
             six.Click += Six_Click; 
             seven.Click += Seven_Click;
             eight.Click += Eight_Click; 
-            nine.Click += Nine_Click; 
+            nine.Click += Nine_Click;  
             dot.Click += Dot_Click;
             c1.Click += C_Click;
             skobka1.Click += Skobka1_Click;
             skobka2.Click += Skobka2_Click; 
-            plus.Click += Plus_Click;
+            plus.Click += Plus_Click; 
             minusodin.Click += Minusodin_Click; 
             ravno.Click += Ravno_Click;
+            x2.Click += X2_Click;
+            _10x.Click += _10x_Click; 
+            xy.Click += Xy_Click;
+            pm.Click += Pm_Click;
+        }
+
+        private void Pm_Click(object? sender, RoutedEventArgs e)
+        {
+            input = "-";
+            double aa = Convert.ToDouble(input);
+            inputint = aa + inputint;
+            vvod.Text = Convert.ToString(inputint);
+            //input = inputint.ToString();
+        }
+
+        private void Xy_Click(object? sender, RoutedEventArgs e)
+        {
+            //inputint = Convert.ToDouble(vvod.Text);
+            //vvod.Text = "";
+            inputint2 = Convert.ToDouble(vvod.Text);
+
+            double i1 = Convert.ToInt32(inputint);            //inputint2
+            double i2 = Convert.ToInt32(inputint2);
+            double xy = Convert.ToDouble(Math.Pow(i1, i2));
+
+            inputint = xy;
+            vvod.Text = Convert.ToString(xy);
+            //inputint = Convert.ToInt32(_10x);
+        }
+
+        private void _10x_Click(object? sender, RoutedEventArgs e)
+        {
+            //int _10x = (10 ^ inputint);
+            //vvod.Text = $"{inputint2}";
+            double i1 = 10;
+            double i2 = Convert.ToInt32(inputint);
+            double _10x = Convert.ToDouble(Math.Pow(i1,i2));
+            vvod.Text = $"{_10x}";
+            inputint = Convert.ToInt32(_10x);
+        }
+
+        private void X2_Click(object? sender, RoutedEventArgs e) //*
+        {
+            inputint = Convert.ToDouble(vvod.Text);
+            double x2 = inputint * inputint;
+            vvod.Text = $"{x2}";
+            inputint = x2;
         }
 
         private void Ravno_Click(object? sender, RoutedEventArgs e)
         {
-            if (plus.IsChecked == true)
+            /*if (plus.IsChecked == true)
             {
                 /*for (int i = 0; i < 10; i++)
                 {
@@ -45,20 +96,35 @@ namespace Calc
                         }
                     }
                 }*/
-                inputint = 0;
-            }
+                //inputint = 0;
+            //}
 
         }
 
         private void Minusodin_Click(object? sender, RoutedEventArgs e)
         {
-            //vvod.Text.IndexOf(input) - 1;
+            //vvod.Text = Convert.ToString(inputint - inputint);
+            string? i = Convert.ToString(inputint);
+            //i += i.Remove(Convert.ToInt32(i.Length - 1));
+            //int i0 = i.Length - 1;
+            //i = i.Remove(i0);
+            //string otvet = i.Remove(i.Length - 1);
+            i = i.Substring(0, i.Length - 1);
+            vvod.Text = i;
         }
 
         private void Plus_Click(object? sender, RoutedEventArgs e)
         {
-            input = "+";
-            vvod.Text += input;
+            //input = "+";
+            //vvod.Text += input;
+            inputint2 = Convert.ToDouble(vvod.Text);
+
+            //double i1 = Convert.ToInt32(inputint);            //inputint2
+            //double i2 = Convert.ToInt32(inputint2);
+            double plus = Convert.ToDouble(inputint + inputint2);
+
+            inputint = plus;
+            vvod.Text = Convert.ToString(plus);
         }
 
         private void Skobka2_Click(object? sender, RoutedEventArgs e)
@@ -72,7 +138,7 @@ namespace Calc
             input = "(";
             vvod.Text += input;
         }
-
+         
         private void C_Click(object? sender, RoutedEventArgs e)
         {
             vvod.Text = "";
@@ -80,7 +146,7 @@ namespace Calc
 
         private void Dot_Click(object? sender, RoutedEventArgs e)
         {             
-            input = ".";
+            input = ",";
             if ((vvod.Text.IndexOf(input) == -1) && (vvod.Text.IndexOf(" ") == -1))
             {
                 vvod.Text += input;
@@ -140,7 +206,7 @@ namespace Calc
             inputint = 2;
             vvod.Text += inputint;
         }
-         
+       
         private void Nol_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 0;
