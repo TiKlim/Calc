@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using System;
 using System.Net.Http.Headers;
+using Tmds.DBus.Protocol;
 
 namespace Calc
 {
@@ -32,12 +33,20 @@ namespace Calc
             skobka2.Click += Skobka2_Click; 
             plus.Click += Plus_Click; 
             minusodin.Click += Minusodin_Click; 
-            ravno.Click += Ravno_Click;
+            ravno.Click += Ravno_Click; 
             x2.Click += X2_Click;
             _10x.Click += _10x_Click; 
             xy.Click += Xy_Click;
             pm.Click += Pm_Click;
+            pi.Click += Pi_Click;
         }
+
+        private void Pi_Click(object? sender, RoutedEventArgs e)
+        {
+            string pi = "3,14159265358980";
+            vvod.Text = pi;
+            inputint = Convert.ToDouble(pi);
+        }                   //Число пи
 
         private void Pm_Click(object? sender, RoutedEventArgs e)
         {
@@ -46,7 +55,7 @@ namespace Calc
             inputint = aa + inputint;
             vvod.Text = Convert.ToString(inputint);
             //input = inputint.ToString();
-        }
+        }                   //хз
 
         private void Xy_Click(object? sender, RoutedEventArgs e)
         {
@@ -61,7 +70,7 @@ namespace Calc
             inputint = xy;
             vvod.Text = Convert.ToString(xy);
             //inputint = Convert.ToInt32(_10x);
-        }
+        }                   //х в степени у
 
         private void _10x_Click(object? sender, RoutedEventArgs e)
         {
@@ -72,9 +81,9 @@ namespace Calc
             double _10x = Convert.ToDouble(Math.Pow(i1,i2));
             vvod.Text = $"{_10x}";
             inputint = Convert.ToInt32(_10x);
-        }
+        }                 //10 в какой-то там степени
 
-        private void X2_Click(object? sender, RoutedEventArgs e) //*
+        private void X2_Click(object? sender, RoutedEventArgs e)                      //*
         {
             inputint = Convert.ToDouble(vvod.Text);
             double x2 = inputint * inputint;
@@ -99,19 +108,20 @@ namespace Calc
                 //inputint = 0;
             //}
 
-        }
+        }                //РАВно
 
         private void Minusodin_Click(object? sender, RoutedEventArgs e)
         {
             //vvod.Text = Convert.ToString(inputint - inputint);
-            string? i = Convert.ToString(inputint);
-            //i += i.Remove(Convert.ToInt32(i.Length - 1));
+            string i = Convert.ToString(inputint);
+            inputint = Convert.ToDouble(i.Remove(i.Length - 1));
+            //inputint = Convert.ToDouble(Convert.ToString(inputint).Remove(Convert.ToString(inputint).Length - 1));
             //int i0 = i.Length - 1;
             //i = i.Remove(i0);
             //string otvet = i.Remove(i.Length - 1);
-            i = i.Substring(0, i.Length - 1);
-            vvod.Text = i;
-        }
+            //inputint = i.Substring(0, i.Length - 1);
+            vvod.Text = $"{inputint}";
+        }            //Минус символ
 
         private void Plus_Click(object? sender, RoutedEventArgs e)
         {
@@ -119,30 +129,29 @@ namespace Calc
             //vvod.Text += input;
             inputint2 = Convert.ToDouble(vvod.Text);
 
-            //double i1 = Convert.ToInt32(inputint);            //inputint2
-            //double i2 = Convert.ToInt32(inputint2);
+            //double i1 = Convert.ToInt32(inputint);            //inputint л
             double plus = Convert.ToDouble(inputint + inputint2);
 
             inputint = plus;
             vvod.Text = Convert.ToString(plus);
-        }
+        }                 //Плюс                       просто плюс
 
         private void Skobka2_Click(object? sender, RoutedEventArgs e)
         {
             input = ")";
             vvod.Text += input;
-        }
+        }              //Скобка ) вот это вот
 
         private void Skobka1_Click(object? sender, RoutedEventArgs e)
         {
             input = "(";
             vvod.Text += input;
-        }
+        }              //Скобка ( и такая вот
          
         private void C_Click(object? sender, RoutedEventArgs e)
         {
             vvod.Text = "";
-        }
+        }                    //! СБРОС !
 
         private void Dot_Click(object? sender, RoutedEventArgs e)
         {             
@@ -151,66 +160,66 @@ namespace Calc
             {
                 vvod.Text += input;
             }
-        }
+        }                  //ЗАП(я)тая
 
         private void Nine_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 9;
             vvod.Text += inputint;
-        }
+        }                 //Девять
 
         private void Eight_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 8;
             vvod.Text += inputint;
-        }
+        }                //Восемь
 
         private void Seven_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 7;
             vvod.Text += inputint;
-        }
+        }                //Семь
 
         private void Six_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 6;
             vvod.Text += inputint;
-        }
+        }                  //Шесть
 
         private void Five_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 5;
             vvod.Text += inputint;
-        }
+        }                 //Пять
 
         private void Four_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 4;
             vvod.Text += inputint;
-        }
+        }                 //ЧетЫре
 
         private void Three_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 3;
             vvod.Text += inputint;
-        }
+        }                //Т  Р  И
 
         private void One_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 1;
             vvod.Text += inputint;
-        }
+        }                  //Д В А
 
         private void Two_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 2;
             vvod.Text += inputint;
-        }
+        }                  //ОДИН
        
         private void Nol_Click(object? sender, RoutedEventArgs e)
         {
             inputint = 0;
             vvod.Text += inputint;
-        }
+        }                  //ноль
     }
 }
