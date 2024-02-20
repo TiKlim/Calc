@@ -159,12 +159,12 @@
 					+/-
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					√
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="2" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="3" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					y√x
 				</TextBlock>
