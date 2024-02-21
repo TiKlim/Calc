@@ -149,7 +149,7 @@
 					)
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button Name="_1x" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="3" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					1/x
 				</TextBlock>
@@ -174,7 +174,7 @@
 					n!
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button Name="modul" HorizontalAlignment="Center" Grid.Row="4" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					|x|
 				</TextBlock>
@@ -199,7 +199,7 @@
 					sin
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button Name="e" HorizontalAlignment="Center" Grid.Row="6" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					e
 				</TextBlock>
@@ -219,12 +219,12 @@
 					x^y
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="7" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button Name="log" HorizontalAlignment="Center" Grid.Row="7" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					log
 				</TextBlock>
 			</Button>
-			<Button HorizontalAlignment="Center" Grid.Row="8" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
+			<Button Name="ln" HorizontalAlignment="Center" Grid.Row="8" Grid.Column="0" Height="70" Width="175" Background="#5D3954" CornerRadius="14">
 				<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23" Foreground="AliceBlue">
 					ln
 				</TextBlock>

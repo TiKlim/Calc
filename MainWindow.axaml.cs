@@ -35,10 +35,62 @@ namespace Calc
             minusodin.Click += Minusodin_Click; 
             ravno.Click += Ravno_Click; 
             x2.Click += X2_Click;
-            _10x.Click += _10x_Click; 
-            xy.Click += Xy_Click;
+            _10x.Click += _10x_Click;  
+            xy.Click += Xy_Click; 
             pm.Click += Pm_Click;
             pi.Click += Pi_Click;
+            modul.Click += Modul_Click;  
+            _1x.Click += _1x_Click;
+            log.Click += Log_Click;
+            ln.Click += Ln_Click; 
+            e.Click += E_Click;
+        }
+
+        private void E_Click(object? sender, RoutedEventArgs e)
+        {
+            string _e = "2,718281828459045235360";
+            vvod.Text = _e;
+            inputint = Convert.ToDouble(_e);
+        }                     //е
+
+        private void Ln_Click(object? sender, RoutedEventArgs e)                       //Логарифм натуральный
+        {
+            double i = inputint; //*
+            double lll = Math.Log(i);
+            vvod.Text = Convert.ToString(lll);
+            inputint = lll;
+        }
+
+        private void Log_Click(object? sender, RoutedEventArgs e)                      //Логарифм
+        {
+            double i = inputint; //*
+            double ll = Math.Log10(i);
+            vvod.Text = Convert.ToString(ll);
+            inputint = ll;
+        }
+
+        private void _1x_Click(object? sender, RoutedEventArgs e)                      //Один делить на x
+        {
+            double i1 = 1;
+            double i2 = Convert.ToInt32(inputint);//*
+            double _1x = i1 / i2;
+            vvod.Text = _1x.ToString();
+            inputint = _1x;
+        }
+
+        private void Modul_Click(object? sender, RoutedEventArgs e)                    //Модули
+        {
+            if (inputint >= 0)
+            {
+                vvod.Text = inputint.ToString();
+            }
+            else
+            {
+                string i = Convert.ToString(inputint);
+                i = i[1..];
+                vvod.Text = i;
+                inputint = Convert.ToDouble(i);
+            }
         }
 
         private void Pi_Click(object? sender, RoutedEventArgs e)
@@ -50,25 +102,40 @@ namespace Calc
 
         private void Pm_Click(object? sender, RoutedEventArgs e)
         {
-            input = "-";
-            double aa = Convert.ToDouble(input);
-            inputint = aa + inputint;
-            vvod.Text = Convert.ToString(inputint);
-            //input = inputint.ToString();
-        }                   //хз
+            if (inputint < 0)
+            {
+                string i = Convert.ToString(inputint);
+                i = i[1..];
+                vvod.Text = i;
+                inputint = Convert.ToDouble(i);
+            }
+            else
+            {
+                input = "-";
+                string aa = input + inputint;//*
+                vvod.Text = aa;
+                inputint = Convert.ToDouble(aa);
+            }
+        }                   //Плюс-минус
 
         private void Xy_Click(object? sender, RoutedEventArgs e)
         {
             //inputint = Convert.ToDouble(vvod.Text);
             //vvod.Text = "";
-            inputint2 = Convert.ToDouble(vvod.Text);
+            input = "^";
+            //inputint2 = Convert.ToDouble(vvod.Text);
+            //string x_y = inputint + input + inputint2;
+            vvod.Text += input;
+            //Ravno_Click(sender, e);
+
+            /*inputint2 = Convert.ToDouble(vvod.Text);
 
             double i1 = Convert.ToInt32(inputint);            //inputint2
             double i2 = Convert.ToInt32(inputint2);
             double xy = Convert.ToDouble(Math.Pow(i1, i2));
 
             inputint = xy;
-            vvod.Text = Convert.ToString(xy);
+            vvod.Text = Convert.ToString(xy);*/
             //inputint = Convert.ToInt32(_10x);
         }                   //х в степени у
 
@@ -77,8 +144,8 @@ namespace Calc
             //int _10x = (10 ^ inputint);
             //vvod.Text = $"{inputint2}";
             double i1 = 10;
-            double i2 = Convert.ToInt32(inputint);
-            double _10x = Convert.ToDouble(Math.Pow(i1,i2));
+            double i2 = Convert.ToInt32(inputint);//*
+            double _10x = Math.Pow(i1,i2);
             vvod.Text = $"{_10x}";
             inputint = Convert.ToInt32(_10x);
         }                 //10 в какой-то там степени
@@ -93,28 +160,22 @@ namespace Calc
 
         private void Ravno_Click(object? sender, RoutedEventArgs e)
         {
-            /*if (plus.IsChecked == true)
+            if (vvod.Text.Contains('^'))
             {
-                /*for (int i = 0; i < 10; i++)
-                {
-                    for (int j = 0; j < 10; j++)
-                    {
-                        if (i != j)
-                        {
-                            int otvet1 = inputint + inputint;
-                        }
-                    }
-                }*/
-                //inputint = 0;
-            //}
-
+                //double i2 = Convert.ToDouble(inputint2);
+                //double i1 = Convert.ToInt32(inputint); //*
+                double i2 = Convert.ToInt32(inputint2); //*
+                double jok = Math.Pow(inputint,i2);
+                vvod.Text = $"{jok}";
+            }
         }                //РАВно
 
         private void Minusodin_Click(object? sender, RoutedEventArgs e)
         {
             //vvod.Text = Convert.ToString(inputint - inputint);
             string i = Convert.ToString(inputint);
-            inputint = Convert.ToDouble(i.Remove(i.Length - 1));
+           // i = i
+            //inputint = Convert.ToDouble(i.Remove(i.Length - 1));
             //inputint = Convert.ToDouble(Convert.ToString(inputint).Remove(Convert.ToString(inputint).Length - 1));
             //int i0 = i.Length - 1;
             //i = i.Remove(i0);
