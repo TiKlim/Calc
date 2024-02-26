@@ -120,14 +120,16 @@ namespace Calc
 
         private void Xy_Click(object? sender, RoutedEventArgs e)
         {
-            //inputint = Convert.ToDouble(vvod.Text);
+            inputint2 = Convert.ToDouble(vvod.Text);
             //vvod.Text = "";
             input = "^";
-            //inputint2 = Convert.ToDouble(vvod.Text);
             //string x_y = inputint + input + inputint2;
             vvod.Text += input;
+            //vvod.Text = "";
+            //inputint2 = Convert.ToDouble(vvod.Text);
+            //inputint2 = 3;
+            vvod.Text += inputint2;
             //Ravno_Click(sender, e);
-
             /*inputint2 = Convert.ToDouble(vvod.Text);
 
             double i1 = Convert.ToInt32(inputint);            //inputint2
@@ -164,8 +166,10 @@ namespace Calc
             {
                 //double i2 = Convert.ToDouble(inputint2);
                 //double i1 = Convert.ToInt32(inputint); //*
-                double i2 = Convert.ToInt32(inputint2); //*
-                double jok = Math.Pow(inputint,i2);
+                //vvod.Text = "";
+                //double i2 = Convert.ToInt32(inputint2); //*
+                //vvod.Text += inputint2;
+                double jok = Math.Pow(inputint,inputint2);
                 vvod.Text = $"{jok}";
             }
         }                //РАВно
@@ -173,15 +177,20 @@ namespace Calc
         private void Minusodin_Click(object? sender, RoutedEventArgs e)
         {
             //vvod.Text = Convert.ToString(inputint - inputint);
-            string i = Convert.ToString(inputint);
-           // i = i
+            //string i = Convert.ToString(inputint);
+            // i = i
             //inputint = Convert.ToDouble(i.Remove(i.Length - 1));
             //inputint = Convert.ToDouble(Convert.ToString(inputint).Remove(Convert.ToString(inputint).Length - 1));
             //int i0 = i.Length - 1;
             //i = i.Remove(i0);
             //string otvet = i.Remove(i.Length - 1);
             //inputint = i.Substring(0, i.Length - 1);
-            vvod.Text = $"{inputint}";
+            //vvod.Text = $"{inputint}";
+            string i = Convert.ToString(inputint);
+            //var indexLast = new Index(1, fromEnd: true);
+            //i = i[1..];
+            vvod.Text = i.Remove(i.Length-1);
+            inputint = Convert.ToDouble(i);
         }            //Минус символ
 
         private void Plus_Click(object? sender, RoutedEventArgs e)
