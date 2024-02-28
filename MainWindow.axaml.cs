@@ -57,12 +57,6 @@ namespace Calc
             mod.Click += Mod_Click; 
             ostatok.Click += Ostatok_Click;  
             factorial.Click += Factorial_Click;
-            //y_coren_x.Click += Y_coren_x_Click;
-        }
-
-        private void Y_coren_x_Click(object? sender, RoutedEventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void Factorial_Click(object? sender, RoutedEventArgs e)                //Факториал
@@ -273,6 +267,7 @@ namespace Calc
 
         private void Ravno_Click(object? sender, RoutedEventArgs e)
         {
+            if (vvod.Text.Contains('(') && vvod.Text.Contains(')'))
             if (vvod.Text.Contains('^'))
             {
                 double stepen = Math.Pow(inputint,inputint2);
