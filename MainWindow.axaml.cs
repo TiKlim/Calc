@@ -12,8 +12,6 @@ namespace Calc
         private string? input;
         private double inputint;
         private double inputint2;
-
-        //private int chislo;
         public MainWindow()
         {
             InitializeComponent();
