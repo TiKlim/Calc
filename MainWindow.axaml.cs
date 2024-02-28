@@ -58,7 +58,6 @@ namespace Calc
             ostatok.Click += Ostatok_Click;  
             factorial.Click += Factorial_Click;
         }
-
         private void Factorial_Click(object? sender, RoutedEventArgs e)                //Факториал
         {
             inputint = Convert.ToDouble(vvod.Text);
