@@ -278,7 +278,7 @@ namespace Calc
             }
             if (vvod.Text.Contains('-'))
             {
-                double minus = inputint - inputint2;
+                double minus = inputint2 - inputint;
                 vvod.Text = $"{minus}";
             }
             if (vvod.Text.Contains('*'))
@@ -288,7 +288,7 @@ namespace Calc
             }
             if (vvod.Text.Contains('/'))
             {
-                double div = inputint / inputint2;
+                double div = inputint2 / inputint;
                 vvod.Text = $"{div}";
             }
             if (vvod.Text.Contains(",e+"))
